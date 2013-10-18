@@ -3,8 +3,6 @@ SpreeOneUseCodePromotionRule
 
 A rule to limit a promotion use to once per account.
 
-![](http://dl.dropbox.com/u/582291/Screenshots/rwpv.png)
-
 Installation
 ------------
 
