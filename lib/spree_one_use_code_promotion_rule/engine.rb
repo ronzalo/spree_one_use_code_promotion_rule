@@ -17,6 +17,11 @@ module SpreeOneUseCodePromotionRule
       end
     end
 
+    initializer 'spree.promo.register.promotions.rules.taxon', after: 'spree.promo.register.promotions.actions' do |app|
+      app.config.spree.promotions.rules += [Spree::Promotion::Rules::OneUseCode]
+    end
+
     config.to_prepare &method(:activate).to_proc
+
   end
 end
