@@ -4,6 +4,10 @@ module Spree
       class OneUseCode < PromotionRule
         attr_reader :email
 
+        def applicable?(promotable)
+          promotable.is_a?(Spree::Order)
+        end
+
         def eligible?(order, options = {})
           @email = order.email
 
